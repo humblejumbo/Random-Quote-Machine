@@ -1,0 +1,50 @@
+#box
+{
+	width: 70%;
+	margin: 10% auto;
+}
+
+#heading
+{
+	font-family: Pangolin;
+	text-decoration: underline;
+	margin: 5% auto;
+}
+
+#quote
+{
+	font-family: Do Hyen;
+	font-weight: 500;
+}
+
+h4{
+	text-align: right;
+	margin: 0;
+}
+#whatsapp
+{
+	display:inline-block;
+}
+
+#buttons
+{
+	margin: 7.5% auto;
+	padding: 0;
+}
+
+i.icon{
+    font-size: 1.5em;
+}
+
+.ui.input {
+    font-size: 0.75em;
+}
+
+.ui.button{
+	margin: 0.25em 0.25em;
+}
+
+.mg
+{
+	display: none;
+}
