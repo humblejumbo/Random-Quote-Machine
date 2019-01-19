@@ -211,18 +211,19 @@ randomGradient();
 function reset()
 {
 	var ourrequest = new XMLHttpRequest();
-	ourrequest.open('get','https://talaikis.com/api/quotes/random/');
+	ourrequest.open('get',"https://thesimpsonsquoteapi.glitch.me/quotes");
+	console.log(ourrequest);
 	ourrequest.onload=function()
 		{
 			var ourdata=JSON.parse(ourrequest.responseText)
-			//console.log(ourdata);
-			$('#quote').html(`<h2><i class="quote left icon"></i> ${ourdata.quote} <i class="quote right icon"></i></h2> 
-				<h4> - <span id='author'> ${ourdata.author} </span> </h4>` );
+			//console.log(ourdata.quote[0]);
+			$('#quote').html(`<h2><i class="quote left icon"></i> ${ourdata[0].quote} <i class="quote right icon"></i></h2> 
+				<h4> - <span id='author'> ${ourdata[0].character} </span> </h4>` );
 
 		}
 	ourrequest.send();
+	
 }
-
 function copy(element)
 {
   	var $temp = $("<input>");
@@ -262,8 +263,8 @@ function randomGradient()
 	//console.log(color1, color2,color3);
 	if(color3)
 	{
-		var foo="linear-gradient(to right,"+color1+","+color2+","+color3+")"
-		console.log(foo);
+		/*var foo="linear-gradient(to right,"+color1+","+color2+","+color3+")"
+		console.log(foo);*/
 		$('body').css({
 		background:"linear-gradient(to right,"+color1+","+color2+","+color3+")"
 		});
